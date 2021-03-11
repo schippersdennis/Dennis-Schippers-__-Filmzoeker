@@ -18,7 +18,7 @@ There are a number of films in the database that the user must be able to filter
 With this final assignment you will create your first toggle menu with JavaScript.
 It will be a drop-down menu that allows you to change the background color of your web page.
 
-## requirements:
+## Requirements:
 Your project must meet these requirements:
 >- As a user I want to be able to see a list of the available movies with the movie poster.
 >- Check the data: every movie in the database has a link to the correct poster.
