@@ -1,76 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styling/style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Luckiest+Guy&family=Special+Elite&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script defer src="./scripts/database.js"></script>
+		<script defer src="./scripts/script.js"></script>
+		<title>Movie Database</title>
+	</head>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Luckiest+Guy&family=Special+Elite&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script defer src="database.js"></script>
-    <script defer src="script.js"></script>
-    <title>Movie Database</title>
-</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<a class="header__logo" href="index.html">
+					<h1 class="header__h1">
+						X<span class="header__span">X</span>X
+					</h1>
+					<h3 class="header__h3">Movie Database</h3>
+				</a>
+			</header>
+			<div class="searchbar">
+				<input
+					class="searchbar__input"
+					id="searchbar"
+					type="text"
+					placeholder="search..."
+					name="search"
+				/>
+			</div>
+			<nav class="nav">
+				<form id="radio-navigation" class="nav__forms">
+					<div class="nav__forms__wrapper-set">
+						<input
+							class="nav__forms__input"
+							type="radio"
+							id="X-Men"
+							name="radio"
+						/>
+						<label class="nav__forms__label" for="X-Men"
+							>X-Men</label
+						>
+					</div>
+					<div class="nav__forms__wrapper-set">
+						<input
+							class="nav__forms__input"
+							type="radio"
+							id="Princess"
+							name="radio"
+						/>
+						<label class="nav__forms__label" for="Princess"
+							>Princes</label
+						>
+					</div>
+					<div class="nav__forms__wrapper-set">
+						<input
+							class="nav__forms__input"
+							type="radio"
+							id="Batman"
+							name="radio"
+						/>
+						<label class="nav__forms__label" for="Batman"
+							>Batman</label
+						>
+					</div>
+					<div class="nav__forms__wrapper-set">
+						<input
+							class="nav__forms__input"
+							type="radio"
+							id="Avengers"
+							name="radio"
+						/>
+						<label class="nav__forms__label" for="Avengers"
+							>Avengers</label
+						>
+					</div>
+					<div class="nav__forms__wrapper-set">
+						<input
+							class="nav__forms__input"
+							type="radio"
+							id="New-Movies"
+							name="radio"
+						/>
+						<label class="nav__forms__label" for="New-Movies"
+							>Nieuwste Films</label
+						>
+					</div>
+					<div class="nav__forms__wrapper-set">
+						<input
+							class="nav__forms__reset"
+							type="reset"
+							id="reset"
+							name="reset"
+							value="Reset"
+						/>
+					</div>
+				</form>
+			</nav>
+			<main class="main">
+				<ul id="movie-list" class="main__list-ul"></ul>
+			</main>
 
-<body>
-    <div class="container">
-        <header class="header">
-            <a class="header__logo" href="index.html">
-                <h1 class="header__h1">X<span class="header__span">X</span>X</h1>
-                <h3 class="header__h3">Movie Database</h3>
-            </a>
-        </header>
-        <div class="searchbar">
-            <input class="searchbar__input" id="searchbar" type="text" placeholder="search..." name="search">
-        </div>
-        <nav class="nav">
-            <form id="radio-navigation" class="nav__forms">
-                <div class="nav__forms__wrapper-set">
-                    <input class="nav__forms__input" type="radio" id="X-Men" name="radio">
-                    <label class="nav__forms__label" for="X-Men">X-Men</label>
-                </div>
-                <div class="nav__forms__wrapper-set">
-                    <input class="nav__forms__input" type="radio" id="Princess" name="radio">
-                    <label class="nav__forms__label" for="Princess">Princes</label>
-                </div>
-                <div class="nav__forms__wrapper-set">
-                    <input class="nav__forms__input" type="radio" id="Batman" name="radio">
-                    <label class="nav__forms__label" for="Batman">Batman</label>
-                </div>
-                <div class="nav__forms__wrapper-set">
-                    <input class="nav__forms__input" type="radio" id="Avengers" name="radio">
-                    <label class="nav__forms__label" for="Avengers">Avengers</label>
-                </div>
-                <div class="nav__forms__wrapper-set">
-                    <input class="nav__forms__input" type="radio" id="New-Movies" name="radio">
-                    <label class="nav__forms__label" for="New-Movies">Nieuwste Films</label>
-                </div>
-                <div class="nav__forms__wrapper-set">
-                    <input class="nav__forms__reset" type="reset" id="reset" name="reset" value="Reset">
-                </div>
-            </form>
-        </nav>
-        <main class="main">
-            <ul id="movie-list" class="main__list-ul"></ul>
-        </main>
-
-        <footer class="footer">
-            <div class="footer__ig">
-                <a class="footer__a" href="https://www.linkedin.com/in/dennis-schippers-25b9311ba/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <div class="footer__wrap">
-                    <h3 class="footer__h3">X<span class="footer__span">X</span>X</h3>
-                    <h5 class="footer__h5">MOVIE DATABASE</h5>
-                </div>
-                <p class="footer__p">Copyright © 2020 by Dennis Schippers</p>
-            </div>
-
-
-        </footer>
-    </div>
-</body>
-
+			<footer class="footer">
+				<div class="footer__ig">
+					<a
+						class="footer__a"
+						href="https://www.linkedin.com/in/dennis-schippers-25b9311ba/"
+						target="_blank"
+						><i class="fab fa-instagram"></i
+					></a>
+					<div class="footer__wrap">
+						<h3 class="footer__h3">
+							X<span class="footer__span">X</span>X
+						</h3>
+						<h5 class="footer__h5">MOVIE DATABASE</h5>
+					</div>
+					<p class="footer__p">
+						Copyright © 2020 by Dennis Schippers
+					</p>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
