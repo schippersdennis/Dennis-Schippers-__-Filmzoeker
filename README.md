@@ -4,7 +4,8 @@ My first steps in Javascript. We have been instructed by the trainer to make a c
 
 ## Javascript Basics - Colors-Toggle
 
-![collerstoggle](https://user-images.githubusercontent.com/72910410/110762058-af998300-8250-11eb-9bf1-8dd492ec8906.jpg)
+![moviedb](https://user-images.githubusercontent.com/72910410/110768085-2fc2e700-8257-11eb-9486-4d90f5f70af0.jpg)
+
 
 #### **Assignment : Colors-Toggle**
 
